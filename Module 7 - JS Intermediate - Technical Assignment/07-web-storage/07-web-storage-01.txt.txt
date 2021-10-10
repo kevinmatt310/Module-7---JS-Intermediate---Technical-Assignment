@@ -1,0 +1,9 @@
+1. Local storage merupakan tempat di browser yang bisa digunakan untuk
+   menyimpan data dan data tidak akan hilang walaupun browser
+   di close dan komputer di restart.Max 5 MB.
+2. Cookie adalah file yang dibuat oleh situs yang Anda kunjungi.
+   Cookie menyimpan data seperti cache, info login, dll. Memudahkan kita ketika
+   berkunjung ke halaman web yang sama, jadi beberapa data masih tersimpan dan tidak perlu menunggu diunduh kembali.
+   Data yang disimpan maksimal 4KB.
+3. LocalStorage menyimpan data tanpa expired.
+   SessionStorage menyimpan data untuk satu sesi alias mempunyai expired.

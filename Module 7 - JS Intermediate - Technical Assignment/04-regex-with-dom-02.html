@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Skilvul</title>
+  </head>
+  <body>
+    <form id="form">
+    <label for="email">Email</label>
+    <input type="text" id="email" name="email" />
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" />
+    <button id="btn-submit" style="display: block; margin-top: 10px">
+      submit
+    </button>
+    </form>
+    <script>
+      /// EDIT DOWN HERE
+
+      const elInputEmail = document.querySelector("#email");
+      const elPassword = document.querySelector("#password");
+      const elBtnSubmit = document.querySelector("#btn-submit");
+      const elForm = document.querySelector("#form");
+      const usernameValidatorEmail = new RegExp("^(?=.*[a-zA-Z])(?=.*[@])(?=.*[.])([a-zA-Z0-9@.]+){17,}$");
+      const usernameValidatorPassword = new RegExp("^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$%^&*])([a-zA-Z0-9!@#$%^&*]+){8,}$");
+
+      elForm.onsubmit = function(e) {
+        e.preventDefault();
+        const testEmail = usernameValidatorEmail.test(elInputEmail.value);
+        const testPassword = usernameValidatorPassword.test(elPassword.value);
+        if (testEmail == false && testPassword == true) {
+            alert("tolong masukan email yang valid ");
+        }
+        else if (testEmail == true && testPassword == false) {
+            alert("tolong masukan password sesuai ketentuan");
+        }
+        else if (testEmail == false && testPassword == false) {
+            alert("tolong masukan email dan password");
+        }
+        else{
+            alert("Welcome to The Jungle");
+        }
+      }
+    </script>
+  </body>
+</html>
